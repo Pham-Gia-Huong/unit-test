@@ -1,6 +1,5 @@
-const path = require("path")
+let build = require("./build/isCheck");
 
-test("",()=>{
-  console.log(path.resolve("../build/isCheck"));
-  expect(7).toBe(7);
+test("check data",()=>{
+  expect(build.check()).toEqual([1,2]);
 })
