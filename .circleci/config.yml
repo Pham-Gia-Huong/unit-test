@@ -1,11 +1,22 @@
-version:2
+version: 2
 jobs:
   build:
-    working_directory:~/Jest
+    working_directory: ~/Jest
     docker:
-      - image: circleci/node:4.8.2
+      - image: circleci/node:10.16.0
     steps:
       - checkout
       - run:
           name: test
           command: npm run test 
+      - restore_cache: 
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: npm run install
+      - save_cache: 
+          paths: 
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }} 
+      - run: npm run test
+      
