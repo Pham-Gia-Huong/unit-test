@@ -8,13 +8,13 @@ jobs:
       - run: npm build
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "build" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - save_cache:
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - build
+          key: v1-dependencies-{{ checksum "build" }}
         
       # run tests!
       - run: npm test
