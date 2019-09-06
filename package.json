@@ -5,7 +5,7 @@
   "main": "demo.js",
   "scripts": {
     "test": "jest",
-    "build":"webpack"
+    "build": "babel src -d build"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
