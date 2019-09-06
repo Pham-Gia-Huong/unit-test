@@ -1,5 +1,5 @@
 function check(){
-  let data= [1,2];
+  let data= [5,2];
  return data;
 }
 export {check}

@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.check = check;
 
 function check() {
-  var data = [1, 2];
+  var data = [5, 2];
   return data;
 }
