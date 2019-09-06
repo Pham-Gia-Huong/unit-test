@@ -3,10 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
-    working_directory: build
+    working_directory: ~/build
     steps:
       - checkout
-
+      - run: npm build
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
