@@ -1,5 +1,6 @@
-// let build = require('../build/sum');
+const path = require("path")
 
-// test("",()=>{
-//   expect(build.sum(5,2)).toBe(7);
-// })
+test("",()=>{
+  console.log(path.resolve("../build/isCheck"));
+  expect(7).toBe(7);
+})
