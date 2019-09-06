@@ -2,10 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16.0
-
-    working_directory: ~/kintone-js-sdk
-
+      - image: circleci/node:7.10
     steps:
       - checkout
 
