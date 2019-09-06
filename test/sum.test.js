@@ -1,5 +1,5 @@
-let build = require('../build/sum');
+// let build = require('../build/sum');
 
-test("",()=>{
-  expect(build.sum(5,2)).toBe(7);
-})
+// test("",()=>{
+//   expect(build.sum(5,2)).toBe(7);
+// })
