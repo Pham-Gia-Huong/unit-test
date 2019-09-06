@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
+    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
@@ -18,3 +19,7 @@ jobs:
       - run: npm build
       # run tests!
       - run: npm test
+
+
+
+      
